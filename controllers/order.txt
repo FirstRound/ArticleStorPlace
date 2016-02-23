@@ -1,0 +1,8 @@
+article
+keywords
+author
+conference
+
+k_t_a
+a_t_au
+a_t_c

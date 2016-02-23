@@ -1,0 +1,440 @@
+----------TRANSACTION START----------
+TIME: Sun Nov 22 23:18:16 2015
+QUERY: SELECT * FROM article WHERE article.a_id=506cd82456edb227291bb00d784ee493 ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+----------TRANSACTION START----------
+TIME: Sun Nov 22 23:18:16 2015
+QUERY: SELECT word FROM k_t_a|keywords WHERE k_t_a.a_id=506cd82456edb227291bb00d784ee493 ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+----------TRANSACTION START----------
+TIME: Sun Nov 22 23:18:16 2015
+QUERY: SELECT name FROM a_t_au|author WHERE a_t_au.a_id=506cd82456edb227291bb00d784ee493
+RESULT: 
+OK
+----------TRANSACTION END----------
+----------TRANSACTION START----------
+TIME: Sun Nov 22 23:18:20 2015
+QUERY: select title,doi,pdf,a_id from k_t_a|article|keywords LIKE keywords.word=Embedded&software LIMIT(0,10) distinct
+RESULT: 
+OK
+----------TRANSACTION END----------
+----------TRANSACTION START----------
+TIME: Sun Nov 22 23:18:23 2015
+QUERY: SELECT * FROM article WHERE article.a_id=fa9b95ea2fbd8575c08ba585b23d4aca ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+----------TRANSACTION START----------
+TIME: Sun Nov 22 23:18:23 2015
+QUERY: SELECT word FROM k_t_a|keywords WHERE k_t_a.a_id=fa9b95ea2fbd8575c08ba585b23d4aca ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+----------TRANSACTION START----------
+TIME: Sun Nov 22 23:18:23 2015
+QUERY: SELECT name FROM a_t_au|author WHERE a_t_au.a_id=fa9b95ea2fbd8575c08ba585b23d4aca
+RESULT: 
+OK
+----------TRANSACTION END----------
+----------TRANSACTION START----------
+TIME: Sun Nov 22 23:18:25 2015
+QUERY: SELECT * FROM article LIMIT(0,10)
+RESULT: 
+OK
+----------TRANSACTION END----------
+----------TRANSACTION START----------
+TIME: Sun Nov 22 23:18:27 2015
+QUERY: select name,issn,isbn,c_id from conference LIMIT(0,10)
+RESULT: 
+OK
+----------TRANSACTION END----------
+----------TRANSACTION START----------
+TIME: Sun Nov 22 23:18:29 2015
+QUERY: select title,doi,pdf,a_id from a_t_c|article where a_t_c.c_id=b3609afd417f79779b29c046bc3b03ac LIMIT(0,10) ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:05:41 2015
+QUERY: select title,doi,pdf,a_id from a_t_c|article where a_t_c.c_id=b3609afd417f79779b29c046bc3b03ac LIMIT(0,10) ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:11:37 2015
+QUERY: select title,doi,pdf,a_id from a_t_c|article where a_t_c.c_id=b3609afd417f79779b29c046bc3b03ac LIMIT(0,10) ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:11:42 2015
+QUERY: SELECT * FROM article WHERE article.a_id=8846320451c1810bb6a8d4cda6db2beb ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:11:42 2015
+QUERY: SELECT word FROM k_t_a|keywords WHERE k_t_a.a_id=8846320451c1810bb6a8d4cda6db2beb ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:11:42 2015
+QUERY: SELECT name FROM a_t_au|author WHERE a_t_au.a_id=8846320451c1810bb6a8d4cda6db2beb
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:11:45 2015
+QUERY: select title,doi,pdf,a_id from k_t_a|article|keywords LIKE keywords.word=Mathematical&model LIMIT(0,10) distinct
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:19:20 2015
+QUERY: SELECT * FROM article ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:20:00 2015
+QUERY: SELECT word FROM keywords LIMIT(0, 3) ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:22:04 2015
+QUERY: SELCT doi FROM article LIMIT(0,3) ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:22:15 2015
+QUERY: SELECT doi FROM article LIMIT(0,3) ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:22:54 2015
+QUERY: Ssd
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:23:36 2015
+QUERY: Ssd
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:23:38 2015
+QUERY: Ssd
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:23:41 2015
+QUERY: d
+RESULT: 
+ERROR
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:23:59 2015
+QUERY: SELECT doi from article limit(0,3)
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:24:12 2015
+QUERY: select title,doi,pdf,a_id from k_t_a|article|keywords LIKE keywords.word=Mathematical&model LIMIT(0,10) distinct
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:24:16 2015
+QUERY: SELECT * FROM article WHERE article.a_id=48fe3e598654a17e026eeca5195dedf2 ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:24:16 2015
+QUERY: SELECT word FROM k_t_a|keywords WHERE k_t_a.a_id=48fe3e598654a17e026eeca5195dedf2 ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:24:16 2015
+QUERY: SELECT name FROM a_t_au|author WHERE a_t_au.a_id=48fe3e598654a17e026eeca5195dedf2
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:24:18 2015
+QUERY: SELECT * FROM article LIMIT(0,10)
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:24:47 2015
+QUERY: select title,doi,pdf,a_id from k_t_a|article|keywords LIKE keywords.word=Laboratories LIMIT(0,10) distinct
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:24:51 2015
+QUERY: select title,doi,pdf,a_id from k_t_a|article|keywords LIKE keywords.word=Computational&modeling LIMIT(0,10) distinct
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:24:55 2015
+QUERY: select title,doi,pdf,a_id from k_t_a|article|keywords LIKE keywords.word=Frequency LIMIT(0,10) distinct
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:24:58 2015
+QUERY: select title,doi,pdf,a_id from k_t_a|article|keywords LIKE keywords.word=Delay LIMIT(0,10) distinct
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:25:00 2015
+QUERY: select name,issn,isbn,c_id from conference LIMIT(0,10)
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:25:02 2015
+QUERY: select title,doi,pdf,a_id from a_t_c|article where a_t_c.c_id=4f3874280c62176ebbdb8b49a1dec200 LIMIT(0,10) ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:25:04 2015
+QUERY: SELECT * FROM article WHERE article.a_id=84013a98f9375e28734080ac0abd75a3 ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:25:04 2015
+QUERY: SELECT word FROM k_t_a|keywords WHERE k_t_a.a_id=84013a98f9375e28734080ac0abd75a3 ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:25:04 2015
+QUERY: SELECT name FROM a_t_au|author WHERE a_t_au.a_id=84013a98f9375e28734080ac0abd75a3
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:25:07 2015
+QUERY: select title,doi,pdf,a_id from k_t_a|article|keywords LIKE keywords.word=IEEE&news LIMIT(0,10) distinct
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:25:09 2015
+QUERY: SELECT * FROM article WHERE article.a_id=84013a98f9375e28734080ac0abd75a3 ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:25:09 2015
+QUERY: SELECT word FROM k_t_a|keywords WHERE k_t_a.a_id=84013a98f9375e28734080ac0abd75a3 ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:25:09 2015
+QUERY: SELECT name FROM a_t_au|author WHERE a_t_au.a_id=84013a98f9375e28734080ac0abd75a3
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 09:25:11 2015
+QUERY: select title,doi,pdf,a_id from k_t_a|article|keywords LIKE keywords.word=Engineering&management LIMIT(0,10) distinct
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 12:13:52 2015
+QUERY: SELECT * FROM article LIMIT(0,10)
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 12:13:54 2015
+QUERY: SELECT * FROM article WHERE article.a_id=f38541ce25da2dc6299e354574499b21 ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 12:13:54 2015
+QUERY: SELECT word FROM k_t_a|keywords WHERE k_t_a.a_id=f38541ce25da2dc6299e354574499b21 ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 12:13:54 2015
+QUERY: SELECT name FROM a_t_au|author WHERE a_t_au.a_id=f38541ce25da2dc6299e354574499b21
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 13:23:47 2015
+QUERY: SELECT * FROM article WHERE article.a_id=f38541ce25da2dc6299e354574499b21 ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 13:23:47 2015
+QUERY: SELECT word FROM k_t_a|keywords WHERE k_t_a.a_id=f38541ce25da2dc6299e354574499b21 ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 13:23:47 2015
+QUERY: SELECT name FROM a_t_au|author WHERE a_t_au.a_id=f38541ce25da2dc6299e354574499b21
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 13:23:58 2015
+QUERY: SELECT * FROM article LIMIT(0,10)
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 13:24:57 2015
+QUERY: SELECT word FROM keywords LIMIT(0,4 ;)
+RESULT: 
+ERROR
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 13:25:08 2015
+QUERY: SELECT word FROM keywords LIMIT(0,4) ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 13:46:48 2015
+QUERY: SELECT * FROM article LIMIT(0,10)
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 13:47:03 2015
+QUERY: SELECT * FROM article LIMIT(0,10)
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 13:47:20 2015
+QUERY: SELECT * FROM article WHERE article.a_id=20e59ebe31739dea54e86b1e6e3fb2ca ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 13:47:20 2015
+QUERY: SELECT word FROM k_t_a|keywords WHERE k_t_a.a_id=20e59ebe31739dea54e86b1e6e3fb2ca ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 13:47:20 2015
+QUERY: SELECT name FROM a_t_au|author WHERE a_t_au.a_id=20e59ebe31739dea54e86b1e6e3fb2ca
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 15:43:26 2015
+QUERY: SELECT word FROM keywords LIMIT(0,4) ORDER[word];
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 15:43:32 2015
+QUERY: SELECT word FROM keywords LIMIT(0,4) ORDER_DOWN[word];
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 16:03:27 2015
+QUERY: SELECT word FROM keywords LIMIT(0,4) ORDER_DOWN[word];
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 17:28:05 2015
+QUERY: SELECT word FROM keywords LIMIT(0,4) ORDER_DOWN[word] ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+
+----------TRANSACTION START----------
+TIME: Mon Nov 23 17:28:13 2015
+QUERY: SELECT word FROM keywords LIMIT(0,4)  ;
+RESULT: 
+OK
+----------TRANSACTION END----------
+

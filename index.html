@@ -1,0 +1,100 @@
+<%
+import os
+from bottle import route, run, SimpleTemplate, static_file, template, view, request, redirect
+from models.article import Article
+from models.conference import Conference
+from models.user import User
+from controllers.ArticleController import ArticleController
+from controllers.UserController import UserController
+from controllers.ConferenceController import ConferenceController
+from controllers.WebDBController import WebDBController
+from views.ArticleView import ArticleView
+
+import time
+import psycopg2
+import hashlib
+
+dbname = "knbase"
+user = "postgres"
+password = "root"
+
+
+page = request.query.page
+include("header", page = page)
+
+dbController = WebDBController()
+dbController.connect(dbname, user, password)
+articleController = ArticleController(dbController)
+articleView = ArticleView(articleController)
+userController = UserController(dbController)
+conController = ConferenceController(dbController)
+
+pop_keys = articleController.get_top_keywords()
+rated = userController.get_rated_articles()
+
+try:
+	if (reg != None):
+		name,passw,email = reg
+		if(articleController.create_new_account(name,passw,email)):
+			User.set_values(name, email, passw)
+			page = "index"
+			redirect("./index")
+		else:
+			redirect("./index?page=login")
+		end
+	end
+except BaseException as e:
+	print(str(e))
+
+if page == "index":
+	include("./pages/index")
+elif page == "articles":
+	articles = articleView.show_full_article_table(request.query.tab or "0")
+	include("./pages/articles", vars = articles, tab = request.query.tab or "0", type = "author")
+	include("./pages/sidebar", pop_keys = pop_keys, rated=rated)
+elif page == "article":
+	article = articleView.show_article_by_id(request.query.id)
+	articleView.show_similar_article(article)
+	rate = userController.get_article_rating(request.query.id)
+	print(rate)
+	include("./pages/article", var = article, rate = rate)
+	include("./pages/sidebar", pop_keys = pop_keys, rated=rated)
+elif page == "search":
+	type = request.query.type
+	if (type == "keyword"):
+		articles = articleView.show_articles_by_keyword(request.query.value)
+		include("./pages/search_results", vars = articles, type = "keywords", word = request.query.value)
+	elif (type == "author"):
+		articles = articleView.show_articles_by_author(request.query.value)
+		include("./pages/search_results", vars = articles, type = "author", word = request.query.value)
+	elif (type == "conference"):
+		conferences = conController.get_conference_by_name(request.query.value)
+		include("./pages/conferences", tab = "0", vars = conferences, type = "conference", word = request.query.value)
+	elif (type == "journal"):
+		pass
+	else:
+		pass
+	end
+	include("./pages/sidebar", pop_keys = pop_keys, rated=rated)
+elif page == "login":
+	include("./pages/login")
+elif page == "add":
+	include("./pages/add_article")
+elif page == "register":
+	include("./pages/registration")
+elif(page == "logout"):
+		User.logout()
+		redirect("./index")
+elif (page == "conferences"):
+	conferences = conController.get_all_conferences(request.query.tab or "0")
+	include("./pages/conferences", vars = conferences, tab=request.query.tab or "0")
+	include("./pages/sidebar", pop_keys = pop_keys, rated=rated)
+elif (page == "conference"):
+	articles = articleController.get_articles_to_conference(request.query.id, request.query.tab or "0")
+	include("./pages/articles", vars = articles, tab=request.query.tab or "0", type="conference article")
+	include("./pages/sidebar", pop_keys = pop_keys, rated=rated)
+else:
+	include("./pages/index")
+end
+include("footer")
+%>

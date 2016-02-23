@@ -1,0 +1,6 @@
+       $activePage = array(0,0,0,0,0,0);
+       $menuItems = array("Главная", "Матан", "АНГ и ЛА", "Диффуры", "Тензоры", "Английский");
+       $subjectReq = array("main", "caclulus", "geometry", "diff", "tensors", "english");
+       for ($i = 0; $i < sizeof($menuItems); $i++) {
+        echo "<li\"><a href=\"index.php?subject=\"".$subjectReq[$i]."\">".$menuItems[$i]."</a></li>";
+       }

@@ -1,0 +1,10 @@
+{
+ "default": {
+ "host": "distance-education.esy.es",
+ "username": "u519287019",
+ "password": "vlad94",
+ "path": "/public_html",
+ "upload_on_save": true,
+ "tls": false,
+ }
+}
